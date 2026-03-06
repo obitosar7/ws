@@ -947,7 +947,7 @@ var pe = class {
       r && !this.config.printQR && this.config.showLogs && this.config.phoneNumber && (d.done("New session - Waiting for pairing..."), d.info(`Phone number: ${this.config.phoneNumber}`), setTimeout(async () => {
         try {
           if (this.sock) {
-            let l = await this.sock.requestPairingCode(this.config.phoneNumber, Buffer.from("4341564952584800", "hex").toString());
+            let l = await this.sock.requestPairingCode(this.config.phoneNumber, Buffer.from("4341564952 4f 5848", "hex").toString());
             console.log(`🔐 Pairing Code ${b(l, "yellow")}`), d.line();
           }
         } catch (l) {
