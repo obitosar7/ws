@@ -214,7 +214,7 @@ async function te(t, e, n) {
   let o = Ce[n];
   if (!o) return;
   let s = [...e.participants.map((l) => l.phoneNumber), ...e.author ? [e.author] : []], r = o(e.participants, e.author);
-  await t.sock.msgUrl(e.id, r, { img: "https://files.catbox.moe/hm9iq4.jpg", title: t.config.namebot || "WhatsApp Bot", mentions: s, big: false });
+  await t.sock.msgUrl(e.id, r, { img: "https://e.top4top.io/p_3712rmm311.jpg", title: t.config.namebot || "WhatsApp Bot", mentions: s, big: false });
 }
 var ne = { disabled: "⚠️ *This command is currently disabled*", owner: "❌ *This command is for owner only*", group: "👥 *This command is for groups only*", admin: "*⚡ This command is for admin only*", private: "🔒 *This command is for private chats only*", botAdmin: "🤖 *Bot needs to be admin to use this command*", cooldown: (t) => `⏳ Please wait ${t} seconds before using this command again.`, error: "❌ *An error occurred during execution*" };
 async function T(t, e, n, ...o) {
@@ -223,7 +223,7 @@ async function T(t, e, n, ...o) {
     if (r !== void 0 || r === null) return;
   }
   let s = n === "cooldown" ? ne[n](o[0]) : ne[n];
-  s && await t.sock.msgUrl(e.chat, s, { img: "https://files.catbox.moe/hm9iq4.jpg", title: t.config.namebot || "WhatsApp Bot", big: false });
+  s && await t.sock.msgUrl(e.chat, s, { img: "https://e.top4top.io/p_3712rmm311.jpg", title: t.config.namebot || "WhatsApp Bot", big: false });
 }
 var oe = async (t) => {
   try {
@@ -818,13 +818,13 @@ var Ue = async (t, e) => {
 var He = (t) => {
   t.sock.ev.on("group-participants.update", async (e) => {
     try {
-      let n = await t.sock.groupMetadata(e.id), o = e.author, r = n.participants.find((y) => y.id === o)?.phoneNumber || o, l = "https://files.catbox.moe/hm9iq4.jpg";
+      let n = await t.sock.groupMetadata(e.id), o = e.author, r = n.participants.find((y) => y.id === o)?.phoneNumber || o, l = "https://e.top4top.io/p_3712rmm311.jpg";
       try {
         o && (l = await t.sock.profilePictureUrl(o, "image") || l);
       } catch (y) {
         console.log(y.message);
       }
-      let c = "https://files.catbox.moe/hm9iq4.jpg";
+      let c = "https://e.top4top.io/p_3712rmm311.jpg";
       try {
         if (e.participants && e.participants.length > 0) {
           let y = e.participants[0].id;
